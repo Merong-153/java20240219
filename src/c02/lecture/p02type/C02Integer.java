@@ -8,7 +8,7 @@ public class C02Integer {
         int b = 10;
         b = 30;
         b = 300000000;
-        b = -300000000;
+        b = -30000000;
 
         //long
         long c = 3000000000L;
