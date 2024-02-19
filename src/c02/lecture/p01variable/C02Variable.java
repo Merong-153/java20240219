@@ -11,7 +11,7 @@ public class C02Variable {
         int d, b, c;
 
         //여러 변수 선언, 값 할당을 한 명령문에서 작성 가능
-        int g = 10, h = 30, k = 23;
+        int g = 10, h = 31, k = 23;
 
         //다른 변수의 값을 대입하는 것 가능
 
