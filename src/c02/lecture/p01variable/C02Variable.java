@@ -6,7 +6,7 @@ public class C02Variable {
         // int a;
 //        System.out.println(a);
         // 변수 선언과 값 대입을 한 명령문에서 할 수 있음
-        int a = 10;
+        int a = 101;
         //변수 여러개를 한 명령문에서 선언 가능
         int d, b, c;
 
