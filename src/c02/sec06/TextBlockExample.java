@@ -1,4 +1,4 @@
-package c02.sec01;
+package c02.sec06;
 
 public class TextBlockExample {
     public static void main(String[] args) {

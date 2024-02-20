@@ -1,14 +1,16 @@
-package c02.sec01;
+package c02.sec04;
 
 public class FloatDoubleExample {
     public static void main(String[] args) {
-        float var1 = 0.123456789123456789f;
+        float var1 = 0.1234567890123456789F;
         double var2 = 0.1234567890123456789;
+
         System.out.println("var1 = " + var1);
         System.out.println("var2 = " + var2);
 
+
         double var3 = 3e6;
-        float var4=3e6F;
+        float var4 = 3e6F;
         double var5 = 2e-3;
 
         System.out.println("var3 = " + var3);
