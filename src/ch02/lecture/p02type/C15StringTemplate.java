@@ -1,5 +1,7 @@
 package ch02.lecture.p02type;
 
+import static java.lang.StringTemplate.STR;
+
 public class C15StringTemplate {
     public static void main(String[] args) {
         // java 21

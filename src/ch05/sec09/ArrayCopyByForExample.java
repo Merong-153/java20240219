@@ -1,19 +1,18 @@
 package ch05.sec09;
 
+import java.util.Arrays;
+
 public class ArrayCopyByForExample {
     public static void main(String[] args) {
-        int[] oldIntArray = {1,2,3};
+        int[] oldIntArray = {1, 2, 3};
 
-        int[] newIntAray = new int[5];
+        int[] newIntArray = new int[5];
 
         for (int i = 0; i < oldIntArray.length; i++) {
-            newIntAray[i] = oldIntArray[i];
+            newIntArray[i] = oldIntArray[i];
         }
 
-        for (int i = 0; i < newIntAray.length; i++) {
-            System.out.println(newIntAray[i]+", ");
-        }
-
-
+        System.out.println(Arrays.toString(newIntArray));
+        
     }
 }
