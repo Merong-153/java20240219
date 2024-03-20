@@ -28,30 +28,3 @@ class C03Car {
     String color = "black";
     int price = 3000;
 }
-
-
-class Car {
-
-    //멤버변수,필드
-    String model;
-    int carNumber;
-    String color;
-
-
-    //생성자 new 연산자 사용시 객체의 초기화를 담당
-    public Car(String model, int carNumber, String color){
-        this.model = model;
-        this.carNumber = carNumber;
-        this.color = color;
-    }
-
-
-    //메서드
-    void go(){
-        System.out.println("달린다");
-    }
-    void stop(){
-        System.out.println("멈춘다");
-    }
-
-}
