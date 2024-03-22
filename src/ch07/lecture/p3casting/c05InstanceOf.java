@@ -1,6 +1,6 @@
 package ch07.lecture.p3casting;
 
-public class C05InstanceOf {
+public class c05InstanceOf {
     public static void main(String[] args) {
         A a = new E();
 
