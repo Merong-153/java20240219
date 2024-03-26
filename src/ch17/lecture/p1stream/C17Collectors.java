@@ -1,20 +1,16 @@
 package ch17.lecture.p1stream;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class C17Collectors {
     public static void main(String[] args) {
-        List<String> list = List.of("java", "css", "html",
-                "spring", "jquery", "c++",
-                "swift", "home", "javascript");
+        List<String> list
+                = List.of("java", "spring", "son", "lee", "otani");
 
-        // Map<String, Long>
+        Long collect = list.stream()
+                .collect(Collectors.counting());
 
-        Map<Character, Long> collect = list.stream()
-                .collect(Collectors.groupingBy(e -> e.charAt(0),
-                        Collectors.counting()));
         System.out.println("collect = " + collect);
     }
 }
