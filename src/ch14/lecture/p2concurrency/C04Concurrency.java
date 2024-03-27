@@ -11,23 +11,27 @@ public class C04Concurrency {
         t2.start();
         t1.join();
         t2.join();
+
+        System.out.println(o.getValue());
     }
 }
 
 class MyObject4 implements Runnable {
+    //    private long value;
     private AtomicLong value;
-
 
     public MyObject4() {
         this.value = new AtomicLong();
     }
 
     public long getValue() {
+//        return value;
         return value.longValue();
     }
 
-    public void update(){
+    public void update() {
         for (int i = 0; i < 30000; i++) {
+//            value++;
             value.getAndIncrement();
         }
     }
@@ -35,6 +39,5 @@ class MyObject4 implements Runnable {
     @Override
     public void run() {
         update();
-        System.out.println(getValue());
     }
 }

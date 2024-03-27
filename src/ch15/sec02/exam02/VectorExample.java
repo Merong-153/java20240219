@@ -1,45 +1,34 @@
 package ch15.sec02.exam02;
 
+import ch15.sec02.exam01.Board;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
 public class VectorExample {
-    public static void main(String[] args) {
-        List<Board> list = new Vector<>();
+    public static void main(String[] args) throws InterruptedException {
+//        List<Board> list = new Vector<>();
+//        List<Board> list = new ArrayList<>();
+        List<Board> list = Collections.synchronizedList(new ArrayList<>());
 
-        Thread threadA = new Thread() {
-            @Override
-            public void run() {
-                for (int i = 1; i <= 1000; i++) {
-                    list.add(new Board("제목" + i, "내용" + i, "글쓴이" + i));
-                }
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                list.add(new Board("제목" + i, "내용" + i, "저자" + i));
             }
-        };
-
-        Thread threadB = new Thread(){
-            @Override
-            public void run() {
-                for (int i = 1001; i <= 2000; i++) {
-                    list.add(new Board("제목" + i, "내용" + i, "글쓴이" + i));
-
-                }
+        });
+        Thread t2 = new Thread(() -> {
+            for (int i = 1000; i < 2000; i++) {
+                list.add(new Board("제목" + i, "내용" + i, "저자" + i));
             }
-        };
-        threadA.start();
-        threadB.start();
+        });
+        t1.start();
+        t2.start();
 
+        t2.join();
+        t1.join();
 
-        try {
-            threadA.join();
-            threadB.join();
-        } catch (Exception e) {
-        }
-
-
-        int size = list.size();
-        System.out.println("총 객체 수" + size);
-        System.out.println();
-
-
+        System.out.println("list.size() = " + list.size());
     }
 }

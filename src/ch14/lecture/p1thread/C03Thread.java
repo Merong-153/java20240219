@@ -1,7 +1,7 @@
 package ch14.lecture.p1thread;
 
 public class C03Thread {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // Thread 만들기
         // 1. Thread 클래스 상속
         //    run 메소드 재정의
@@ -13,6 +13,7 @@ public class C03Thread {
         // Thread 시작하기
         MyThread3 thread = new MyThread3();
         thread.start(); // Thread 시작하기
+        thread.join();
 
         for (int i = 0; i < 30000; i++) {
             System.err.println(i);

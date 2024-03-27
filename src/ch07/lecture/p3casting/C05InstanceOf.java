@@ -1,8 +1,8 @@
 package ch07.lecture.p3casting;
 
-public class c05InstanceOf {
+public class C05InstanceOf {
     public static void main(String[] args) {
-        A a = new E();
+        A a = new B();
 
         System.out.println(a instanceof A);
         System.out.println(a instanceof B);
